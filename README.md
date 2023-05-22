@@ -1,5 +1,5 @@
 ﻿# <a name="_d9n8kug9zfwy"></a>Markov Decision Processes 
-## <a name="_ck498m7vlico"></a>Problem 1
+## <a name="_ck498m7vlico"></a>Problem 1 - Frozen Lake
 I have chosen a popular problem Frozen Lake (FrozenLake-v0) from OpenAI, where agents are rewarded by the environment when they accomplish a predefined goal. It has a simple structure and has a small number of states 16, that would help me understand how Markov Decision Processes (MDP) and reinforcement learning algorithms work by going step-by-step.
 ### <a name="_hepr1q7gula"></a>MDP
 In the experiment I will be comparing the difference between value iteration (VI) and policy iteration (PI). In the first set of experiments I want to examine how the gamma (discounting factor) would affect the result, in terms of execution time, iterations to converge, and average award over 100 trials. 
@@ -79,7 +79,7 @@ Table 2 below lists some of the parameters giving the best performance of Q-Lear
 |(alpha=0.55, discount=0.95)|exponential|0\.70|42|2\.0252|
 
 Compared with the previous section, Q-Learning requires a higher number of iterations and much longer time but the average reward score is lower. This is sensible as Q-Learning is model-free, has no prior knowledge on the existing state and reward. With purely random action and probability, the reinforcement algorithm is able to achieve an acceptable result.
-## <a name="_k5v5e6vii0km"></a>Problem 2
+## <a name="_k5v5e6vii0km"></a>Problem 2 - Forest Management
 Forest Management has been chosen as the second problem for the following experiments. The primary reason is, it could have a large number of states compared with the first problem; but on the other side it has basically 2 simple actions, wait and cut, for easier understanding. Also the reward value can be customized when the forest is in its oldest state and different action is performed. In the following experiments, different parameters of decay rates, epsilons, and minimum epsilons are used to demonstrate the result, and comparison will be made against the first problem which has much smaller size in terms of number of states.
 ### <a name="_37sfns9squ8c"></a>Value Iteration
 Below figure 4.1 and 4.2 shows that a smaller number of states would need more iterations to converge, because at a higher number of problem size it is failing to find a better final value and take few iterations to obtain a converged point, which is likely a local maxima. 
